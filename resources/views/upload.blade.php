@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Subir Archivos</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  
     @vite('resources/css/app.css')
 
 </head>
@@ -15,13 +15,13 @@
         @endif
 
         @if ($errors->any())
-            <div class="bg-red-200 text-red-800 p-3 rounded-md mb-4">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+        <div class="bg-red-200 text-red-800 p-3 rounded-md mb-4">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
         @endif
 
         <form action="{{ route('upload.file') }}" method="POST" enctype="multipart/form-data">
